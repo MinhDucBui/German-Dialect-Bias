@@ -9,6 +9,8 @@
 We examine whether such stereotypes are mirrored by large language models (LLMs). We draw on the sociolinguistic literature on dialect perception to analyze traits commonly associated with dialect speakers. Based on these traits, we assess the *dialect naming* bias and *dialect usage* bias expressed by LLMs in two tasks: *association task* and *decision task*. To assess a model's *dialect usage* bias, we construct a novel evaluation corpus that pairs sentences from seven regional German dialects (e.g., Alemannic and Bavarian) with their standard German counterparts.
 
 
+![A cute llama with two people](img/front_img.png)
+
 ---
 
 ## 📂 Directory/File Structure Overview
