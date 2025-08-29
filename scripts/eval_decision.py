@@ -8,7 +8,7 @@ import numpy as np
 import sys
 sys.path.append(os.getcwd())
 from scripts import MODELS, DECISIONS
-from scripts.eval_implicit import check_parsing, eval_bias_statistics, compute_bias, init_count
+from scripts.eval_association import check_parsing, eval_bias_statistics, compute_bias, init_count
 
 
 DIMENSIONS = list(DECISIONS.keys())

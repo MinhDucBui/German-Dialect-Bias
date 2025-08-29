@@ -1,4 +1,13 @@
-# German Dialect Bias
+<h1 align="center">
+<span>
+<span>Large Language Models Discriminate Against Speakers of German Dialects</span>
+</h1>
+
+[![arxiv preprint](https://img.shields.io/badge/arXiv-2208.01575-b31b1b.svg)](https://xxx)
+
+
+We examine whether such stereotypes are mirrored by large language models (LLMs). We draw on the sociolinguistic literature on dialect perception to analyze traits commonly associated with dialect speakers. Based on these traits, we assess the *dialect naming* bias and *dialect usage* bias expressed by LLMs in two tasks: *association task* and *decision task*. To assess a model's *dialect usage* bias, we construct a novel evaluation corpus that pairs sentences from seven regional German dialects (e.g., Alemannic and Bavarian) with their standard German counterparts.
+
 
 ---
 
@@ -14,13 +23,13 @@
   Runs the model inference to generate predictions.
   
 - **scripts/eval_implicit.py**  
-  Evaluates the model predictions for implicit bias.
+  Evaluates the model predictions for association task.
   
 - **scripts/extract_decision.py**  
   Extracts decision outputs from the model.
   
-- **scripts/eval_implicit.py**  
-  Evaluates the model for decision bias.
+- **scripts/eval_decision.py**  
+  Evaluates the model for decision task.
 
 - See plots/ to generate final plots
 
@@ -56,30 +65,30 @@ pip install -r requirements.txt
 
 ### Running the Inference
 
-1. **Implicit Bias Inference**  
+1. **Dialect Usage Bias Inference**  
    - Execute the following command:
      ```
-     python scripts/inference.py --model_name $MODEL_PATH --output_folder output/implicit --gt_file data/prompts/tasks/implicit.csv
+     python scripts/inference.py --model_name $MODEL_PATH --output_folder output/association_usage --gt_file data/prompts/tasks/association_usage.csv
      ```
   
-2. **Explicit Bias Inference**  
+2. **Dialect Naming Bias Inference**  
    - Execute the following command:
      ```
-     python scripts/inference.py --model_name $MODEL_PATH --output_folder output/explicit --gt_file data/prompts/tasks/explicit.csv
+     python scripts/inference.py --model_name $MODEL_PATH --output_folder output/association_naming --gt_file data/prompts/tasks/association_naming.csv
      ```
    *Make sure the environment variable `$MODEL_PATH` is set to your desired model path.*
 
 ---
 
-## 3. Evaluation of Implicit Bias
+## 3. Evaluation of the Association Task 
 
 - Run the implicit bias evaluation script:
   ```
-  python scripts/eval_implicit.py
+  python scripts/eval_association.py
   ```
 ---
 
-## 4. Evaluation of Decision Bias
+## 4. Evaluation of Decision Task
 
 ### Steps
 
@@ -102,3 +111,11 @@ pip install -r requirements.txt
 
 - In scripts/__init__.py, we specifiy the model name mapping function that is being used in the eval scripts to clean model names up.
 - Outputs of all models will be shared in an online drive folder (as it is too big to upload) after acceptance
+
+------------------------
+
+
+
+## License
+
+This project is licensed under the xxxx - see the [LICENSE.md](LICENSE.md) file for details</span>

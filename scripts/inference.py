@@ -24,7 +24,6 @@ def load_model(model_name):
             model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16, trust_remote_code=True).eval()
             #model.to(DEVICE)
     else:
-        print('HI')
         model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
         model.to(DEVICE)
     model.config.pad_token_id = tokenizer.eos_token_id
@@ -167,9 +166,9 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", type=str, default="Qwen/Qwen2.5-72B-Instruct",
                         help="Name of the model to use for inference.")
     parser.add_argument("--output_folder", type=str,
-                        default="salary_estimation/output/implicit", help="Path to the output CSV file.")
+                        default="salary_estimation/output/association_usage", help="Path to the output CSV file.")
     parser.add_argument("--gt_file", type=str,
-                        default="salary_estimation/data/prompts/tasks/implicit/implicit.csv", help="Path to the output CSV file.")
+                        default="salary_estimation/data/prompts/tasks/association_usage.csv", help="Path to the output CSV file.")
 
     args = parser.parse_args()
 

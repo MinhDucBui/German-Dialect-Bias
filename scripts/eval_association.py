@@ -196,7 +196,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run inference on a dataset and save the results.")
     parser.add_argument("--input_folder", type=str,
-                        default="output/implicit/", help="Path to the input CSV file.")
+                        default="output/association/", help="Path to the input CSV file.")
 
     args = parser.parse_args()
 
